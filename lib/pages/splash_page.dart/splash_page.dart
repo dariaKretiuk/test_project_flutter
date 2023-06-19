@@ -36,7 +36,7 @@ class _SplashPageState extends State<SplashPage> {
         }
       },
       child: Scaffold(
-        backgroundColor: theme.white,
+        backgroundColor: theme.lightPink,
         body: Center(
           child: Text(
             'Splash Page',

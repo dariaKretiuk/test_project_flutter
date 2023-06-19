@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:test_project_flutter/helpers/constans/app_theme.dart';
 import 'package:test_project_flutter/navigation/navigation_delegate.dart';
 import 'package:test_project_flutter/navigation/page_manager.dart';
+import 'package:test_project_flutter/pages/bottom_bar/bottom_tab_bar.dart';
 
 class AppPage extends StatefulWidget {
   const AppPage({Key? key}) : super(key: key);
@@ -68,7 +69,7 @@ class _AppPageState extends State<AppPage> {
     });
 
     return Scaffold(
-      backgroundColor: UIThemes.lightThemeData().white,
+      backgroundColor: UIThemes.lightThemeData().lightPink,
       resizeToAvoidBottomInset: false,
       body: Column(
         children: [
@@ -93,6 +94,9 @@ class _AppPageState extends State<AppPage> {
                 ),
               ],
             ),
+          ),
+          BottomTabBar(
+            activeTab: activeTab,
           ),
         ],
       ),
