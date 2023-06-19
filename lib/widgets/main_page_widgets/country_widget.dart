@@ -62,7 +62,7 @@ class _CountryWidgetState extends State<CountryWidget> {
               ),
               height: widget.country.groupPhoneNumber.length * 70,
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 child: ListView.builder(
                   shrinkWrap: false,
                   physics: const NeverScrollableScrollPhysics(),

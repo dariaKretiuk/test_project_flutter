@@ -58,7 +58,7 @@ class _FiltersPhonesWidgetState extends State<FiltersPhonesWidget> {
                     onPressed: () {
                       UserCubit.read(context).saveTypeMessage(TypeMessage.sms);
                     },
-                    width: MediaQuery.of(context).size.width * 0.25,
+                    width: (MediaQuery.of(context).size.width - 130) / 3,
                   ),
                   const SizedBox(
                     width: 10,

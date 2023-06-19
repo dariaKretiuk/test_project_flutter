@@ -78,29 +78,20 @@ class _MainPageState extends State<MainPage> {
         ),
         body: SingleChildScrollView(
             scrollDirection: Axis.vertical,
-            child: SizedBox(
-              height: MediaQuery.of(context).size.height,
-              child: Column(
-                children: [
-                  const FiltersPhonesWidget(),
-                  Expanded(
-                    child: ListView.builder(
-                      shrinkWrap: false,
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemCount: userState.user.groupCountryPhones.length,
-                      itemBuilder: (context, index) {
-                        return Padding(
-                          padding: const EdgeInsets.only(bottom: 20),
-                          child: CountryWidget(
-                            country: userState.user.groupCountryPhones[index],
-                            pathImage: _resultPathImage(userState.user.groupCountryPhones[index].nameCountry),
-                          ),
-                        );
-                      },
+            child: Column(
+              children: [
+                const FiltersPhonesWidget(),
+                Column(
+                    children: userState.user.groupCountryPhones.map((item) {
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 20),
+                    child: CountryWidget(
+                      country: item,
+                      pathImage: _resultPathImage(item.nameCountry),
                     ),
-                  ),
-                ],
-              ),
+                  );
+                }).toList()),
+              ],
             )),
       ),
     );
