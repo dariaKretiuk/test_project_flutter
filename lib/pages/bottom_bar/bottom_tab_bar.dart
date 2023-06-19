@@ -123,7 +123,7 @@ class _TabButton extends StatelessWidget {
             const SizedBox(
               height: 4,
             ),
-            Text(label, style: active ? theme.p5.copyWith(color: theme.blue) : theme.p5.copyWith(color: theme.lightBlue)),
+            Text(label, style: active ? theme.p2.copyWith(color: theme.blue) : theme.p2.copyWith(color: theme.lightBlue)),
             const SizedBox(
               height: 2,
             ),

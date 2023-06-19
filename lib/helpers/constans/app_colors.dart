@@ -6,6 +6,7 @@ class ModeColors {
   static const Color pink = Color(0xFFF2D7E1);
   static const Color lightPink = Color(0xFFFBEEF3);
   static const Color black = Color(0xFF333333);
+  static const Color white = Color(0xFFFFFFFF);
   static const Color red = Color(0xFFF33D3D);
   static const Color lightRed = Color(0xFFFDE3E3);
   static const Color green = Color(0xFF27CC80);

@@ -44,7 +44,7 @@ class _ErrorToastState extends State<ErrorToast> {
             data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0, boldText: false),
             child: Text(
               errorMessage,
-              style: theme.p3.copyWith(color: theme.red),
+              style: theme.p1.copyWith(color: theme.red),
               maxLines: 5,
               textAlign: TextAlign.center,
             ),

@@ -47,7 +47,7 @@ class _InfoToastState extends State<InfoToast> {
             data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0, boldText: false),
             child: Text(
               errorMessage,
-              style: theme.p3.copyWith(color: theme.green),
+              style: theme.p1.copyWith(color: theme.green),
               maxLines: 5,
               textAlign: TextAlign.center,
             ),
