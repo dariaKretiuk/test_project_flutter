@@ -40,7 +40,7 @@ class _SplashPageState extends State<SplashPage> {
         body: Center(
           child: Text(
             'Splash Page',
-            style: theme.p3.copyWith(color: theme.black),
+            style: theme.p1.copyWith(color: theme.black),
           ),
         ),
       ),

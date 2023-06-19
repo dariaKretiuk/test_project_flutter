@@ -6,6 +6,8 @@ import 'package:test_project_flutter/interfaces/user_repository.dart';
 
 part '../states/user_state.dart';
 
+enum TypeMessage { sms, mms, voice }
+
 class UserCubit extends Cubit<UserState> {
   // Статические методы для прослушивания и получения кубита
   static UserState watchState(BuildContext context) => context.watch<UserCubit>().state;
@@ -16,13 +18,21 @@ class UserCubit extends Cubit<UserState> {
     required AppMessageCubit appMessageCubit,
   })  : _userRepository = userRepository,
         _appMessageCubit = appMessageCubit,
-        super(UserState(status: LoadingUser(), user: UserModel.emptyModel()));
+        super(UserState(status: LoadingUser(), user: UserModel.emptyModel(), typeMessage: TypeMessage.sms, selecteTypePhone: 'All'));
 
   final UserRepository _userRepository;
   final AppMessageCubit _appMessageCubit;
 
   void fetchUser() async {
     await _fetchCalls();
+  }
+
+  void saveTypeMessage(TypeMessage typeMessage) {
+    emit(state.copyWith(typeMessage: typeMessage));
+  }
+
+  void saveTypePhone(String typePhone) {
+    emit(state.copyWith(selecteTypePhone: typePhone));
   }
 
   Future<void> _fetchCalls() async {
